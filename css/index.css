@@ -8,11 +8,15 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: Roboto,sans-serif;
+  background-color: #c1e8ff;
+}
 
 .nav {
   height: 50px;
   width: 100vw;
-  background-color: var(--text-color);
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -26,28 +30,34 @@
 }
 .nav-links a li {
   list-style: none;
+  color: var(--heading-color);
 }
 
 .logo {
   height: 20px;
   width: 100px;
-  background-color: red;
+  background-color: #7da0ca;
 }
 .main-section {
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
   height: 100vh;
   width: 100vw;
-  background-color: var(--heading-color);
+ 
   align-items: center;
 
 }
 /* image */
 .img {
-  background-color: black;
+  
   height: 50vh;
   width: 80vw;
   position: relative;
+  object-fit: cover;
+}
+.img-main {
+  width: 80%;
 }
 .txt-overlay {
   background-color: red;
@@ -57,14 +67,28 @@
   bottom: 0;
   left: 40px;
 }
+.c1 {
+  height: 100px;
+  width: 80vw;
+  background-color: #7da0ca;
+  border-radius: 20% 50% 20% 50%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .title-1 {
   height: 40px;
   width: 200px;
-  background-color: blue;
+  color: white;
+  margin-bottom: 20px;
 }
 /* main-section card */
 .cards1 {
-  background-color: aliceblue;
+  background-color: #c1e8ff
+  border-radius: 20px;
+  
 }
 
 /* about section style */
@@ -77,12 +101,14 @@
 }
 
 .about-section-text {
-  flex: 1;
+  width: 200px;
+  font-size: 13px;
   text-align: left;
   font-family: Roboto,sans-serif;
-  font-weight: thin;
-  border-radius: 40%;
-  background-color: aquamarine;
+  text-transform: lowercase;
+  text-align: justify;
+  
+
 }
 .about-image {
   height: 100px;
@@ -94,4 +120,14 @@
   column-gap: 20px;
   margin-left: 10px;
   align-items: center;
+  height: 300px;
+}
+
+
+
+@media screen and (max-width:600px) {
+  .about-section-text {
+    font-size: 14px;
+    width: 250px;
+  }
 }
